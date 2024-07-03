@@ -1,0 +1,220 @@
+:root{
+    --color-blue:#0a3871;
+    --color-gris:#495057;
+    --color-greyDark: #343A40;
+	--color-lightBlue: #F3F5FC ;
+    --color-lightBlue1:#D8DFE8;
+	--color-lightBlue2: #D8DFE8;
+
+}
+
+body{
+    background: #f3f5fc;
+    font-family: "Inter", sans-serif;
+}
+textarea{
+    font-family: "Inter", sans-serif;
+}
+/*HEADER*/
+header{
+    background-color: var(--color-lightBlue);
+}
+.header{
+    background-color: var(--color-lightBlue);
+    width: 90%;
+    margin: auto;
+}
+.header_logo{
+    margin-top: 40px;
+}
+/*MAIN*/
+.main{
+    /* background-color: blueviolet; */
+    width: 80.5%;
+    margin: auto 40px auto auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    min-height: calc(100vh - 91px - 72px);
+    align-items: end;
+}
+.left{
+    background-color: var(--color-lightBlue);
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.ingreso_texto{
+    width: 80%;
+    font-size: 32px;
+    color:var(--color-blue);
+    background: none;
+    border: none;
+    outline: none;
+    resize: none;
+}
+.ingreso_texto::placeholder{
+    color: var(--color-blue);
+}
+.left__footer{
+    background-color: #f3f5fc;
+}
+.fas{
+    color: var(--color-gris);
+    font-size: 12px;
+}
+.left_botones{
+    display: flex;
+    gap: 24px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+.btn-encriptar,
+.btn-desencriptar,
+.btn-copiar{
+    border: 1px solid var(--color-blue);
+    cursor: pointer;
+    max-width: 328px;
+    min-width: 160px;
+    width: 40%;
+    height: 67px;
+    border-radius: 24px;   
+    font-size: 16px;
+    transform: translateY(0.5px);
+    box-shadow: 4px 0px 18px rgba(10, 20, 155, 0.8);
+}
+.btn-desencriptar:hover,
+.btn-copiar:hover{
+    background-color: var(--color-blue); /* Cambia el color de fondo */
+    color: white; /* Cambia el color del texto */
+    box-shadow: 6px 0px 12px rgba(0, 0, 0, 0.15); 
+}
+.btn-encriptar{
+    background-color: var(--color-blue);
+    color:white;
+}
+.btn-encriptar:hover{
+    background-color: var(--color-lightBlue1); 
+    color: white; 
+    box-shadow: 6px 0px 12px rgba(0, 0, 0, 0.15); 
+}
+.btn-desencriptar{ 
+    background-color: var(--color-lightBlue1);
+    color:var(--color-blue);    
+}
+.right{
+    background-color:rgb(255, 255, 255);
+    height: calc(100% + 48px);
+    border-radius: 32px;
+    padding: 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    align-items: center;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0,0.08);
+    margin: 2px;
+    
+}
+.right.ajustar{
+    justify-content: space-between; 
+    
+}
+#mensajefinal{
+    text-align: center;
+}
+.mensaje__final.ajustar{
+    height: 85%;
+    font-weight: lighter;
+    text-align: left;  
+    overflow: auto; 
+}
+.muñeco{
+    width: 100%;
+}
+.mensaje__final{
+    height: 80%;
+    font-size: 24px;
+    text-align: left;
+    font-weight: bold;
+    background: none;    
+    border: none;
+    outline: none;
+    resize: none;        
+    color: var(--color-blue);          
+}
+.right__info{
+    font-size: 16px;
+    color: var(--color-gris);
+    text-align: center;    
+}
+
+.btn-copiar{
+    width: 100%;
+    background-color: transparent;
+    color: var(--color-blue);
+
+}
+.oculto{
+    display: none;
+}
+.footer{
+    background-color:var(--color-lightBlue1);
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    padding: 24px;
+    text-align: center;
+    margin: 2px;
+}
+
+@media screen and (max-width: 800px) {
+    .main{
+        grid-template-columns: 1fr;
+        grid-template-rows: 75% auto;
+        width: auto;
+        margin: auto 40px;
+
+    }
+    .right{
+        height: 100%;
+    }
+    .muñeco{
+        display: none;
+    }
+    .left_botones{
+        justify-content: center;
+    }
+    .btn-encriptar,
+    .btn-desencriptar{
+        width: 50%;
+    }
+    .footer{
+        font-size: 10px;
+        padding: 16px;
+    }
+}
+@media screen and (max-width: 500px){
+    .main{
+        margin: auto 16px;
+    }
+    .btn-encriptar,
+    .btn-desencriptar{
+        width: 100%;
+        max-width: 100%;
+    }
+    .right{
+        padding: auto;
+        margin: auto;
+    } 
+    .muñeco{
+        display: none;
+    }
+    .footer{
+        font-size: 8px;
+        padding: 12px;
+        margin: 8px;
+    }  
+
+}
